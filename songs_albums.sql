@@ -58,25 +58,25 @@ VALUES
  * TODO: Write a table join query to construct a table of Song Name : Album Name
  */
  
-SELECT Songs.name, Albums.name FROM Songs
-JOIN Albums ON Songs.album_id = Albums.id;
+-- SELECT Songs.name, Albums.name FROM Songs
+-- JOIN Albums ON Songs.album_id = Albums.id;
 
 /*
  * TODO: Find all albums published between 1970 and 1980.
  */
 
-SELECT * FROM Albums WHERE year_published >= 1970 AND year_published <= 1980;
+-- SELECT * FROM Albums WHERE year_published >= 1970 AND year_published <= 1980;
 
 /*
  * TODO: Find all songs on albums published between 1970 and 1980. 
  *(Hint: Use a table join.)
  */
-SELECT Songs.name, Albums.name, Albums.year_published FROM Songs 
-JOIN Albums ON Songs.album_id = Albums.id WHERE year_published >= 1970 AND year_published <= 1980;
+-- SELECT Songs.name, Albums.name, Albums.year_published FROM Songs 
+-- JOIN Albums ON Songs.album_id = Albums.id WHERE year_published >= 1970 AND year_published <= 1980;
 
 
 /*
  * TODO: Find all songs on albums with names containing 'California'.
  */
 
-SELECT Songs.name, Albums.name FROM Songs join Albums ON Songs.album_id = Albums.id WHERE Album.name = '%California%';
+SELECT Songs.name, Albums.name FROM Songs join Albums ON Songs.album_id = Albums.id WHERE Albums.name LIKE '%California%';
